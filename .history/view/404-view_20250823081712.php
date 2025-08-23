@@ -1,0 +1,1 @@
+<h1>vista no encontrada</h1>

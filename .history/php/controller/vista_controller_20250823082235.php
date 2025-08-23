@@ -1,0 +1,14 @@
+<?php
+
+class vista_controller extends vista_model
+{
+    static function cargarVista() {
+        if (isset($_GET["page"])) { //page es el parametro especificado en .htaccess
+            $vista = self::obtenerVista($_GET["page"]); //se asigna esa url a vista si esta establecido
+        } else {
+            $vista = "inicio-view.php"; //se muestra el inicio si no esta establecido el parametro en la url
+        }
+
+        require("view/plantilla.php");
+    }
+}
