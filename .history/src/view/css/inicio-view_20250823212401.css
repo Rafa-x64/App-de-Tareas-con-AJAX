@@ -1,0 +1,42 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../../assets/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+#formulario_inicio_sesion_fondo {
+    backdrop-filter: blur(10px);
+    color: #022c3d;
+}
+
+#formulario_inicio_sesion {
+    color: #022c3d !important;
+}
+
+#formulario_inicio_sesion input[type=email],
+#formulario_inicio_sesion input[type=password] {
+    border: none;
+    border-bottom: #022c3d 4px solid;
+    border-radius: 0px !important;
+}
+
+#formulario_inicio_sesion
+
+#formulario_inicio_sesion input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.formulario_inicio_sesion_icono {
+    border-bottom: #022c3d 4px solid;
+    border-radius: 0px !important;
+}
