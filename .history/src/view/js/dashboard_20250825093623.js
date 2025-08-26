@@ -1,0 +1,1 @@
+import { postData } from  from "../../js/ajax_helper";
