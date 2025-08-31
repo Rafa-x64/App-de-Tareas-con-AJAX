@@ -1,0 +1,24 @@
+<?php 
+include_once("../model/");
+
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+
+    $nombre = trim($_POST["nombre"] ?? "");
+    $apellido = trim($_POST["apellido"] ?? "");
+    $correo = trim($_POST["correo"] ?? "");
+    $contraseña = trim($_POST["contraseña"] ?? "");
+
+    if (!$correo || !isset($correo) || !$contraseña || !isset($contraseña)) {
+        echo json_encode([
+            "ok" => false,
+            "mensaje" => "error en envio o no se ha enviado aun"
+        ]);
+    }else{
+
+        if()
+
+    }
+
+}
+
+?>
