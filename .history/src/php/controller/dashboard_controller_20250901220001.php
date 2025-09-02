@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $usuarioID = trim($_SESSION["usuario"]["id"]);
 
     // Si no se envió nombre, asumimos que es una carga inicial (recuerda que se envia un fetch vacio desde el dashboard.js) 
+    // Carga inicial: no se envió nombre
     if ($nombre === "") {
         $tareas = tarea_model::obtenerTareasUsuario($usuarioID);
     } else {

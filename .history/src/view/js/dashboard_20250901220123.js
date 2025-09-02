@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("tareas").innerHTML = resultado.html;
             }
 
-            formulario.reset();
+            formulario.reset
 
         } catch (error) {
             //si algo sale mal en la ejecucion anterior entonces muestra un mensaje de error
