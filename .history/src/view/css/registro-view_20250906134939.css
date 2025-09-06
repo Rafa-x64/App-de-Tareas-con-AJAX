@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../../assets/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+#formulario_registro_fondo {
+    backdrop-filter: blur(3px);
+    color: #022c3d;
+}
+
+#formulario_registro {
+    color: #022c3d !important;
+}
+
+#formulario_registro input[type=email],
+#formulario_registro input[type=password],
+#formulario_registro input[type=text] {
+    border: none;
+    border-bottom: #022c3d 4px solid;
+    border-radius: 0px !important;
+}
+
+#formulario_registro input[type=email]::webkit-fill,
+#formulario_registro input[type=password]::webkit-fill,
+#formulario_registro input[type=text]::webkit-fill
+
+#formulario_registro input[type=checkbox] {
+    border: 2px solid #022c3d !important;
+}
+
+#formulario_registro input[type=checkbox]:checked {
+    border: none !important;
+    background-color: #022c3d !important;
+    ;
+}
+
+#formulario_registro a {
+    color: #022c3d;
+}
+
+#formulario_registro button[type=submit] {
+    background-color: #022c3d;
+}
+
+#formulario_registro input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.formulario_registro_icono {
+    border-bottom: #022c3d 4px solid;
+    border-radius: 0px !important;
+}
