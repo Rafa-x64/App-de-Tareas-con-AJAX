@@ -30,11 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         datos.append("nombre", nombre);//agregamos nombre y descripcion al objeto form data
         datos.append("descripcion", descripcion);
 
-        if (tareaEditandoID) {
-            datos.append("editar", "1");
-            datos.append("id", tareaEditandoID);
-        }
-
         try {
             //hacemos await para que la pagina espere mientras se hace el fetch (se envia el json al controlador)
             const respuesta = await fetch("php/controller/dashboard_controller.php", { //ruta donde se va a enviar el json y cuerpo del envio
@@ -64,38 +59,4 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("error AJAX: " + error);
         }
     });
-});
-
-let tareaEditandoID = null;
-
-document.addEventListener("click", async (e) => {
-    if (e.target.closest(".btn-editar")) {
-        const btn = e.target.closest(".btn-editar");
-        tareaEditandoID = btn.dataset.id;
-
-        document.getElementById("nombre_tarea").value = btn.dataset.nombre;
-        document.getElementById("descripcion_tarea").value = btn.dataset.descripcion;
-
-        document.querySelector("#formulario_tareas button").textContent = "Actualizar tarea";
-    }
-
-    if (e.target.closest(".btn-eliminar")) {
-        const id = e.target.closest(".btn-eliminar").dataset.id;
-
-        const datos = new FormData();
-        datos.append("eliminar", "1");
-        datos.append("id", id);
-
-        const res = await fetch("php/controller/dashboard_controller.php", {
-            method: "POST",
-            body: datos
-        });
-
-        const resultado = await res.json();
-        if (resultado.ok) {
-            document.getElementById("tareas").innerHTML = resultado.html;
-        } else {
-            alert(resultado.mensaje);
-        }
-    }
 });

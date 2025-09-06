@@ -30,10 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         datos.append("nombre", nombre);//agregamos nombre y descripcion al objeto form data
         datos.append("descripcion", descripcion);
 
-        if (tareaEditandoID) {
-            datos.append("editar", "1");
-            datos.append("id", tareaEditandoID);
-        }
+        
 
         try {
             //hacemos await para que la pagina espere mientras se hace el fetch (se envia el json al controlador)
