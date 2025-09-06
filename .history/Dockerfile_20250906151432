@@ -1,0 +1,17 @@
+FROM php:8.2-apache
+
+# Habilita mod_rewrite si usas rutas limpias
+RUN a2enmod rewrite
+
+# Copia tu código al contenedor
+COPY . /var/www/html/
+
+# Establece el directorio de trabajo
+WORKDIR /var/www/html/
+
+# Instala Composer si lo usas
+RUN curl -sS https://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer
+
+# Expone el puerto 80
+EXPOSE 80
